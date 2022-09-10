@@ -37,4 +37,19 @@ class PessoasController extends Controller
         return response()->json($resposta->data, $resposta->status);
     }
     
+    // Editar  pessoa
+    public function editarPessoa(Request $request) {
+        $resposta = $this->pessoasFacade->editarPessoa($request);
+
+        return response()->json($resposta->data, $resposta->status);
+    }
+
+    //Deletar pessoa
+    public function deletarPessoa($codigoPessoa) {
+        $resposta = $this->pessoasFacade->obterPessoa($codigoPessoa);
+
+        return response($resposta->data, $resposta->status);
+    }
+
+
 }

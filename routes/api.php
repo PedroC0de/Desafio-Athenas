@@ -24,3 +24,5 @@ use App\Http\Controllers\PessoasController;
 Route::get('pessoas', [PessoasController::class, 'obterPessoas']);
 Route::get('pessoa/{codigoPessoa}', [PessoasController::class, 'obterPessoa']);
 Route::post('pessoas',  [PessoasController::class, 'cadastrarPessoa']);
+Route::post('pessoas/deletar/{codigoPessoa}',  [PessoasController::class, 'deletarPessoa']);
+Route::post('pessoas/editar/{codigoPessoa}',  [PessoasController::class, 'editarPessoa']);
