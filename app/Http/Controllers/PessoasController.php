@@ -20,7 +20,7 @@ class PessoasController extends Controller
     public function obterPessoas() {
       $resposta = $this->pessoasFacade->obterPessoas();
 
-      return response($resposta->data, $resposta->status);
+      return response($resposta);
     }
 
     // Obter pessoa via código

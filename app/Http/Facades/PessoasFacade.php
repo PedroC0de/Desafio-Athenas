@@ -15,6 +15,9 @@ class PessoasFacade
 
     public function obterPessoas() {
         $resposta = new Resposta();
+        $pessoa = Pessoa::paginate(10);
+        
+        return $pessoa;
     }
 
     public function obterPessoa($codigoPessoa) {
